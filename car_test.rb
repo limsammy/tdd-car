@@ -21,4 +21,10 @@ class CarTest < Minitest::Test
 		assert_equal(4, car.wheels)
 	end
 
+	def test_default_color_of_the_car_is_yellow
+		car = Car.new
+
+		assert_equal("yellow", car.color)
+	end
+
 end
