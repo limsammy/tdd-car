@@ -16,7 +16,6 @@ class Car
 	end
 
 	def break
-		# binding.pry
 		self.speed -= 30
 	end
 
