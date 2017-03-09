@@ -1,6 +1,3 @@
-# write tests (make assertions about our code)
-# test suite
-
 require "minitest"
 require "minitest/autorun"
 require "minitest/pride"
@@ -61,6 +58,20 @@ class CarTest < Minitest::Test
 		car.break 
 
 		assert_equal(20, car.speed)
+	end
+
+	def test_speed_is_set_to_0_when_car_stops
+		car = Car.new
+
+		car.start
+		car.break
+		car.start
+
+		assert_equal(70, car.speed)
+
+		car.stop
+
+		assert_equal(0, car.speed)
 	end
 
 end
